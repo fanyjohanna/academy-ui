@@ -1,0 +1,16 @@
+<template>
+  <h1 class="page-header">Report</h1>
+  <au-table 
+    data.bind="loader" 
+    columns.bind="columns"
+    rows.bind="detail"
+    sortable.bind="true" 
+    page-size="20"
+    context.bind="contextMenu" 
+    context-click.delegate="__contextMenuCallback($event)">
+    
+   
+  </au-table>
+
+   
+</template>

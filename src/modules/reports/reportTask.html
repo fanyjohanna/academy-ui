@@ -1,0 +1,18 @@
+<template>
+     <div class="col-md-5">
+      <h2 class="page-header">Task</h2>
+      <au-table 
+        view-model.ref="taskTable" 
+        data.bind="taskLoader" 
+        columns.bind="taskColumns" 
+        sortable.bind="true" 
+        page-size="25"
+        context.bind="taskContextMenu" 
+        context-click.delegate="__taskContextMenuCallback($event)" 
+        row-click.delegate="__taskRowClickCallback($event)">
+
+      </au-table>
+    </div>
+
+
+</template>

@@ -1,0 +1,32 @@
+<template>
+
+    <h2 title.bind="title" with.bind="context"></h2>
+    <au-textbox label="code" value.bind="data.code" error.bind="error.code" read-only.bind="readOnly || isEdit"></au-textbox>
+    <au-textbox label="name" value.bind="data.name" error.bind="error.name" read-only.bind="readOnly"></au-textbox>
+    <au-multiline label="description" value.bind="data.description" error.bind="error.description" read-only.bind="readOnly"></au-multiline>
+  
+  <au-dropdown value.bind="value" label.bind="label" error.bind="error" change.delegate="changeCallback($event)" options.bind="options"
+      loader.bind="loader" items.bind="objects" key="code" text="name"></au-dropdown>
+
+  <table class="table table-striped" aurelia-table="data.bind: users; display-data.bind: $displayData; filters.bind: filters">
+    <thead>
+    <tr>
+        <th>Employee</th>
+        <th>Task</th>
+        <th>Status</th>
+       
+    </tr>
+    </thead>
+    <tbody>
+    <tr repeat.for="user of $displayData">
+        <td><a href="">${user.name}</a></td>
+        <td>${user.address.state}</td>
+        <td>${user.email}</a></td>
+        
+    </tr>
+    </tbody>
+</table>
+
+
+
+</template>

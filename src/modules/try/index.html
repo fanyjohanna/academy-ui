@@ -1,0 +1,24 @@
+<template>
+
+  <div class="container">
+        <div class="card card-container">
+            
+            <img class="img-circle" src="./logo.png" width="140" height="120"></center>
+            <p></p>
+            <h3><center>Login</h3>
+           
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text"  value.bind="username" class="form-control" placeholder="Username" required autofocus/>
+                <input type="password" value.bind="password" class="form-control" placeholder="Password" required/>
+                <button type="submit" class="btn btn-success btn-lg btn-block btn-signin" click.delegate="login()">Sign in</button>
+            </form>
+            <a>
+               ${userName}
+            </a>
+            <a>${userPassword}</a>
+        </div>
+    </div>
+
+
+</template>
